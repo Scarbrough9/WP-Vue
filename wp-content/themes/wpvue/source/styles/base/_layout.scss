@@ -1,0 +1,18 @@
+/**
+ * Layout Styles
+ *
+ * Layout styles are typically used to declare styles for shared elements like .site and .container.
+ *
+ * @package WP-Vue
+ * @subpackage SCSS
+ * @since 0.1.0
+ */
+
+.site {
+    background-color: $white;
+    margin: 0 auto;
+    max-width: 1366px;
+    padding: 1rem;
+}
+
+.container {}

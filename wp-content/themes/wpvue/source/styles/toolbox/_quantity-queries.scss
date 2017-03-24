@@ -1,0 +1,60 @@
+/**
+ * Carbon Quantity Queries
+ *
+ * Use to apply styles based on the number of elements present
+ *
+ * Example:
+ * ----------------------------------------------------------------------
+ * ul {
+ *    li {
+ *        @include at-least(3) {
+ *             // these rules will apply when at least 3 li's exist
+ *         }
+ *
+ *    @include at-most(5) {
+ *             // these rules will apply when no more than 5 li's exist
+ *         }
+ *
+ *    @include in-between(5,10) {
+ *             // these rules will apply when there are 5-10 li's
+ *         }
+ *
+ *    @include in-between(3,3) {
+ *             // these rules will apply when there are exactly 3 li's
+ *         }
+ *    }
+ * }
+ * ----------------------------------------------------------------------
+ *
+ * @link http://quantityqueries.com/
+ * @package WP-Vue
+ * @subpackage SCSS
+ * @since 0.1.0
+ */
+
+@mixin at-least($num) {
+    $selector: &;
+    $child: nth(nth($selector, -1), -1);
+    &:nth-last-of-type(n + #{$num}),
+    &:nth-last-of-type(n + #{$num}) ~ #{$child} {
+        @content;
+    }
+}
+
+@mixin at-most($num) {
+    $selector: &;
+    $child: nth(nth($selector, -1), -1);
+    &:nth-last-of-type(-n + #{$num}):first-of-type,
+    &:nth-last-of-type(-n + #{$num}):first-of-type ~ #{$child} {
+        @content;
+    }
+}
+
+@mixin in-between($min, $max) {
+    $selector: &;
+    $child: nth(nth($selector, -1), -1);
+    &:nth-last-of-type(n + #{$min}):nth-last-of-type(-n + #{$max}):first-of-type,
+    &:nth-last-of-type(n + #{$min}):nth-last-of-type(-n + #{$max}):first-of-type ~ #{$child} {
+      @content;
+    }
+}

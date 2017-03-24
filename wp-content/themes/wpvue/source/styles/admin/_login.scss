@@ -1,0 +1,36 @@
+/**
+ * Custom Login Styles
+ *
+ * Include styles you wish to use on the WordPress login screen
+ *
+ * @package WP-Vue
+ * @subpackage SCSS
+ * @since 0.1.0
+ */
+
+body.login {
+    background: #f8f8f8;
+    h1 > a {
+        background-color: #333333;
+        background-image: url("../images/toolbox/colab-logo.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.13);
+        display: block;
+        height: 125px;
+        overflow: hidden;
+        padding-bottom: 25px;
+        text-indent: -9999px;
+        width: 100%;
+    }
+    form {
+        .input {}
+    }
+    label {}
+    #nav,
+    #backtoblog {
+        > a {}
+    }
+}

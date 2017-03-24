@@ -1,0 +1,46 @@
+/**
+ * Gallery Styles
+ *
+ * A style reset for WordPress generated galleries
+ * This depends on the grid mixin include in the toolbox
+ *
+ * @package WP-Vue
+ * @subpackage SCSS
+ * @since 0.1.0
+ */
+
+$gallery_gutter: 1rem;
+$gallery_start: 480px;
+$gallery_mobile_width: 50%; // Typically either 100% or 50%
+
+.gallery .gallery-item {
+    @include mq_range(319px, 479px) {
+        float: left;
+        width: $gallery_mobile_width;
+
+        &:nth-of-type(odd) {
+            clear: both;
+        }
+    }
+}
+
+.gallery .gallery-item img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gallery .gallery-item .gallery-caption {
+    margin: $gallery_gutter/2 0 0;
+}
+
+@for $i from 1 through 9 {
+    .gallery.gallery-columns-#{$i} {
+        @include grid($gallery_gutter, $gallery_start, #{$i}, $gallery_mobile_width);
+    }
+    .gallery.gallery-columns-#{$i} .gallery-item {
+        @include column-span(1, $gallery_start, #{$i});
+        margin: 0;
+    }
+}

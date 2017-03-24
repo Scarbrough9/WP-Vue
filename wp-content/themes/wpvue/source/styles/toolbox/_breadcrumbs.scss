@@ -1,0 +1,26 @@
+/**
+ * Carbon Breadcrumbs
+ *
+ * @package WP-Vue
+ * @subpackage SCSS
+ * @since 0.1.0
+ */
+
+.carbon-breadcrumbs {
+	margin: 0;
+	padding: 0;
+	@include clear;
+
+	&__item {
+		list-style-type: none;
+		float: left;
+	}
+
+	&__item--current {
+		font-weight: bold;
+	}
+
+	&__item--divider {
+		margin: 0 .5rem;
+	}
+}

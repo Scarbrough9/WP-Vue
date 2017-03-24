@@ -1,0 +1,81 @@
+{
+    "key": "group_57c8f761d9421",
+    "title": "Tracking and Analytics",
+    "fields": [
+        {
+            "key": "field_57c8f84242c65",
+            "label": "Google Tag Manager",
+            "name": "carbon_google_tag_manager",
+            "type": "textarea",
+            "instructions": "Add\/update your Google Tag Manager tracking code here.<br><br><strong>NOTE<\/strong>: Do not use both google analytics and google tag manager.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<!-- Google Tag Manager -->\r\n<noscript><iframe src=\"\/\/www.googletagmanager.com\/ns.html?id=GTM-XXXX\"\r\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"><\/iframe><\/noscript>\r\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\r\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\r\n'\/\/www.googletagmanager.com\/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,'script','dataLayer','GTM-XXXX');<\/script>\r\n<!-- End Google Tag Manager -->",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 10,
+            "new_lines": ""
+        },
+        {
+            "key": "field_57c8f7719dbf3",
+            "label": "Google Analytics",
+            "name": "carbon_google_analytics",
+            "type": "textarea",
+            "instructions": "Add\/update your Google Analytics tracking code here.<br><br><strong>NOTE<\/strong>: Do not use both google analytics and google tag manager.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<!-- Google Analytics -->\r\n<script>\r\n    var _gaq=[['_setAccount','UA-XXXXXXXX-X'],['_trackPageview']];\r\n    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];\r\n    g.src=('https:'==location.protocol?'\/\/ssl':'\/\/www')+'.google-analytics.com\/ga.js';\r\n    s.parentNode.insertBefore(g,s)}(document,'script'));\r\n<\/script>\r\n<!-- End Google Analytics -->",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 10,
+            "new_lines": ""
+        },
+        {
+            "key": "field_57c90a0dd741f",
+            "label": "Facebook Pixel",
+            "name": "carbon_facebook_pixel",
+            "type": "textarea",
+            "instructions": "Add\/update your Facebook Pixel tracking code here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<!-- Facebook Pixel -->",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 10,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-trackinganalytics"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1485459368
+}

@@ -1,0 +1,33 @@
+/**
+ * Global Styles
+ *
+ * Global styles are designed to handle some overarching settings such as viewport settings and box sizing.
+ * Styles added to this file should be limited to styles applied globally to base level elements.
+ *
+ * @package WP-Vue
+ * @subpackage SCSS
+ * @since 0.1.0
+ */
+
+/* Set viewport options */
+@-webkit-viewport {width: device-width;}
+@-mos-viewport {width: device-width;}
+@-ms-viewport {width: device-width;}
+@-o-viewport {width: device-width;}
+@viewport {width: device-width;}
+
+/* Set box sizing */
+*, *:before, *:after, input[type="search"] {
+    box-sizing: border-box;
+}
+
+html {}
+
+body {
+    background-color: $gray_5;
+}
+
+.screen-reader-text {
+    display: none;
+    visibility: hidden;
+}

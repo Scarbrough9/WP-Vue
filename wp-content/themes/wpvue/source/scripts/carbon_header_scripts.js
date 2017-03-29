@@ -1,1 +1,0 @@
-require('./header_scripts/modernizr');

@@ -48,6 +48,14 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
-    "normalize.scss": "^0.1.0"
+    "css-loader": "^0.27.3",
+    "jquery": "^3.2.1",
+    "normalize.scss": "^0.1.0",
+    "sass-loader": "^6.0.3",
+    "scss-loader": "^0.0.1",
+    "vue": "^2.2.5",
+    "vue-loader": "^11.3.3",
+    "vue-style-loader": "^2.0.4",
+    "vue-template-compiler": "^2.2.5"
   }
 }

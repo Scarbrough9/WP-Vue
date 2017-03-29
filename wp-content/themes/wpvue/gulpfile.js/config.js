@@ -28,8 +28,7 @@ module.exports = {
             dest: "public/scripts"
         },
         entries: {
-            carbon_header_scripts: "carbon_header_scripts.js",
-            carbon_scripts: "carbon_scripts.js"
+            wpvue: "wpvue.js"
         }
     },
     styles: {
@@ -38,7 +37,7 @@ module.exports = {
     },
     watch: {
         php: "**/*.php",
-        scripts: "source/scripts/**/*.js",
+        scripts: "source/scripts/**/*.{js,vue}",
         styles: "source/styles/**/*.scss",
         fonts: "source/fonts/**/*",
         images: "source/images/**/*.{png,gif,jpg}",
